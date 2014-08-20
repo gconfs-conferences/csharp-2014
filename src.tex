@@ -1,0 +1,193 @@
+\documentclass[12pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{tikz}
+
+% BEGIN STYLE
+
+\setbeameroption{hide notes}
+\setbeamertemplate{note page}[plain]
+
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\hypersetup{pdfpagemode=UseNone}
+
+\setmonofont{Inconsolata}
+
+\usefonttheme{professionalfonts}
+\usefonttheme{serif}
+\usepackage{fontspec}
+\setmainfont{Helvetica Neue}
+\setbeamerfont{note page}{family*=pplx,size=\footnotesize}
+
+\definecolor{latexblue}{RGB}{87,102,181}
+
+\definecolor{foreground}{RGB}{21,21,21}
+\definecolor{background}{RGB}{242,245,227}
+\definecolor{title}{RGB}{27,130,63}
+\definecolor{gray}{RGB}{155,155,155}
+\definecolor{subtitle}{RGB}{102,255,204}
+\definecolor{hilight}{RGB}{102,255,204}
+\definecolor{vhilight}{RGB}{255,111,207}
+
+\useinnertheme{rectangles}
+
+\setbeamercolor{background canvas}{bg=background}
+\setbeamercolor{titlelike}{fg=title}
+\setbeamercolor{subtitle}{fg=subtitle}
+\setbeamercolor{institute}{fg=gray}
+\setbeamercolor{normal text}{fg=foreground,bg=background}
+\setbeamercolor{item projected}{bg=foreground, fg=background}
+\setbeamercolor{structure}{fg=foreground}
+\setbeamercolor{subitem}{fg=foreground}
+\setbeamercolor{itemize/enumerate subbody}{fg=foreground}
+
+\setbeamertemplate{itemize subitem}{{\textendash}}
+
+\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+
+\setbeamertemplate{footline}{
+    \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
+\scriptsize\insertframenumber}}}\hspace*{5pt}}
+
+\addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
+
+\newminted{csharp}{bgcolor=gray!25,fontsize=\footnotesize,mathescape}
+
+% END STYLE
+
+\title[Introduction au C\#]{\textbf{Introduction au C\#}}
+
+\author{
+    Valentin 'toogy' Iovene \\
+    Quentin 'Neodyblue' Coelho
+}
+
+\institute{\includegraphics[scale=0.38]{img/logos.png}}
+
+\date{}
+
+\begin{document}
+
+{
+    \setbeamertemplate{footline}{} % no page number here
+    \frame{
+        \titlepage
+    }
+}
+
+\section*{Introduction}
+
+\begin{frame}
+    \frametitle{La conférence}
+    \tableofcontents[pausesections]
+\end{frame}
+
+\section{Organiser son projet et maintenir son code}
+
+\begin{frame}
+    \begin{center}
+        \vspace{1cm}
+        {\Large \textbf{1.} Organiser son projet\\
+        et maintenir son code \\}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \vspace{1cm}
+        {\large Organiser son \textbf{projet}}
+    \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+    \begin{center}
+        \vspace{1cm}
+        {\large Réfléchir avant d'agir (de coder)} \\
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \vspace{1cm}
+    {\large \textbf{Avoir les idées claires, savoir où on va}} \\
+    \begin{itemize}
+        \pause \item Brainstorming : trouver ce qu'on \textbf{veut} faire \\
+        \pause \item Fixer un but \emph{concret} à atteindre (le produit)
+        \pause \item Représenter son projet visuellement
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \vspace{1cm}
+    {\large \textbf{Découper son projet en fonctionnalités}} \\
+    \begin{itemize}
+        \pause\item Menu \\
+        \pause\item Minimap \\
+        \pause\item Map \\
+        \pause\item Unités \\
+        \begin{itemize}
+            \pause\item Ouvrier \\
+            \begin{itemize}
+                \pause\item Récolte \\
+                \pause\item Construction de bâtiments \\
+            \end{itemize}
+            \pause\item Combats \\
+            \pause\item Déplacements \\
+        \end{itemize}
+        \pause\item Système de ressources \\
+        \pause\item Bâtiments \\
+        \begin{itemize}
+            \pause\item File d'attente de création d'unités \\
+            \pause\item Point de ralliement \\
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \vspace{1cm}
+    {\large \textbf{Priorisation (valeur ajoutée + dépendance)}} \\
+    \begin{itemize}
+        \item Map \\
+        \item Unités \\
+        \item Unités:Déplacements \\
+        \item Système de ressources \\
+        \item Bâtiments \\
+        \item Unités:Ouvrier:Récolte \\
+        \item Unités:Ouvrier:Construction de bâtiments \\
+        \item Unités:Combats \\
+        \item Bâtiments:File d'attente de création d'unités \\
+        \item Bâtiments:Point de ralliement \\
+        \item Minimap \\
+        \item Menu \\
+    \end{itemize}
+\end{frame}
+
+%{ % all template changes are local to this group.
+    %\setbeamertemplate{background canvas}{\includegraphics[height=\paperheight]{img/baby.jpg}}
+    %\begin{frame}
+        %\begin{center}
+            %{\Huge \textbf{KNIFE THE BABY}}
+        %\end{center}
+    %\end{frame}
+%}
+
+\begingroup
+\setbeamercolor{background canvas}{bg=title}
+\begin{frame}
+    \begin{center}
+        \vspace{1cm}
+        {\Large\color{background} Maintenir son \textbf{\{code\}}}
+    \end{center}
+\end{frame}
+\endgroup
+
+\end{document}
