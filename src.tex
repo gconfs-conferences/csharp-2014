@@ -31,7 +31,7 @@
 \definecolor{latexblue}{RGB}{87,102,181}
 
 \definecolor{foreground}{RGB}{255,255,255}
-\definecolor{background}{RGB}{51,86,65}
+\definecolor{background}{RGB}{39,8,11}
 \definecolor{title}{RGB}{255,255,255}
 \definecolor{gray}{RGB}{159,255,197}
 \definecolor{subtitle}{RGB}{159,255,197}
@@ -72,8 +72,6 @@
     Quentin 'Neodyblue' Coelho
 }
 
-\institute{\includegraphics[scale=0.38]{img/logos.png}}
-
 \date{}
 
 \begin{document}
@@ -81,113 +79,22 @@
 {
     \setbeamertemplate{footline}{} % no page number here
     \frame{
-        \titlepage
+        \vspace{0.5cm}
+        \begin{center}
+            \includegraphics[scale=0.065]{img/cover.png}
+        \end{center}
     }
 }
 
-\section*{Introduction}
+\input{parts/avant_propos.tex}
 
-\begin{frame}
-    \frametitle{La conférence}
-    \tableofcontents[pausesections]
-\end{frame}
+\input{parts/imperative_programming.tex}
 
-\section{Organiser son projet et maintenir son code}
+\input{parts/csharp_syntax.tex}
 
-\begin{frame}
-    \begin{center}
-        \vspace{1cm}
-        {\Large \textbf{1.} Organiser son projet\\
-        et maintenir son code \\}
-    \end{center}
-\end{frame}
+\input{parts/oop.tex}
 
-\begin{frame}
-    \begin{center}
-        \vspace{1cm}
-        {\large Organiser son \textbf{projet}}
-    \end{center}
-\end{frame}
+\input{parts/tips.tex}
 
-\begin{frame}[fragile]
-    \begin{center}
-        \vspace{1cm}
-        {\large Réfléchir avant d'agir (de coder)} \\
-    \end{center}
-\end{frame}
-
-\begin{frame}
-    \vspace{1cm}
-    {\large \textbf{Avoir les idées claires, savoir où on va}} \\
-    \begin{itemize}
-        \pause \item Brainstorming : trouver ce qu'on \textbf{veut} faire \\
-        \pause \item Fixer un but \emph{concret} à atteindre (le produit)
-        \pause \item Représenter son projet visuellement
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \vspace{1cm}
-    {\large \textbf{Découper son projet en fonctionnalités}} \\
-    \begin{itemize}
-        \pause\item Menu \\
-        \pause\item Minimap \\
-        \pause\item Map \\
-        \pause\item Unités \\
-        \begin{itemize}
-            \pause\item Ouvrier \\
-            \begin{itemize}
-                \pause\item Récolte \\
-                \pause\item Construction de bâtiments \\
-            \end{itemize}
-            \pause\item Combats \\
-            \pause\item Déplacements \\
-        \end{itemize}
-        \pause\item Système de ressources \\
-        \pause\item Bâtiments \\
-        \begin{itemize}
-            \pause\item File d'attente de création d'unités \\
-            \pause\item Point de ralliement \\
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \vspace{1cm}
-    {\large \textbf{Priorisation (valeur ajoutée + dépendance)}} \\
-    \begin{itemize}
-        \item Map \\
-        \item Unités \\
-        \item Unités:Déplacements \\
-        \item Système de ressources \\
-        \item Bâtiments \\
-        \item Unités:Ouvrier:Récolte \\
-        \item Unités:Ouvrier:Construction de bâtiments \\
-        \item Unités:Combats \\
-        \item Bâtiments:File d'attente de création d'unités \\
-        \item Bâtiments:Point de ralliement \\
-        \item Minimap \\
-        \item Menu \\
-    \end{itemize}
-\end{frame}
-
-%{ % all template changes are local to this group.
-    %\setbeamertemplate{background canvas}{\includegraphics[height=\paperheight]{img/baby.jpg}}
-    %\begin{frame}
-        %\begin{center}
-            %{\Huge \textbf{KNIFE THE BABY}}
-        %\end{center}
-    %\end{frame}
-%}
-
-\begingroup
-\setbeamercolor{background canvas}{bg=title}
-\begin{frame}
-    \begin{center}
-        \vspace{1cm}
-        {\Large\color{background} Maintenir son \textbf{\{code\}}}
-    \end{center}
-\end{frame}
-\endgroup
 
 \end{document}
