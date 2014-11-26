@@ -22,6 +22,8 @@
 
 \setmonofont{Inconsolata}
 
+\usepackage{epstopdf}
+
 \usefonttheme{professionalfonts}
 \usefonttheme{serif}
 \usepackage{fontspec}
@@ -30,8 +32,8 @@
 
 \definecolor{latexblue}{RGB}{87,102,181}
 
-\definecolor{foreground}{RGB}{255,255,255}
 \definecolor{background}{RGB}{39,8,11}
+\definecolor{foreground}{RGB}{255,255,255}
 \definecolor{title}{RGB}{255,255,255}
 \definecolor{gray}{RGB}{159,255,197}
 \definecolor{subtitle}{RGB}{159,255,197}
@@ -56,34 +58,37 @@
 \setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
 
 \setbeamertemplate{footline}{
-    \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
+  \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
 \scriptsize\insertframenumber}}}\hspace*{5pt}}
 
 \addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
 
-\newminted{csharp}{bgcolor=gray!25,fontsize=\footnotesize,mathescape}
+\newminted{csharp}{bgcolor=background,fontsize=\footnotesize,mathescape}
+
+\usemintedstyle{fruity}
 
 % END STYLE
 
 \title[Introduction au C\#]{\textbf{Introduction au C\#}}
 
 \author{
-    Valentin 'toogy' Iovene \\
-    Quentin 'Neodyblue' Coelho
+  Quentin 'Neodyblue' Coelho\\
+  Valentin 'toogy' Iovene\\
+  Raphaël 'Shugo' Boissel
 }
 
-\date{}
+\date{28 novembre 2014}
 
 \begin{document}
 
 {
-    \setbeamertemplate{footline}{} % no page number here
-    \frame{
-        \vspace{0.5cm}
-        \begin{center}
-            \includegraphics[scale=0.065]{img/cover.png}
-        \end{center}
-    }
+  \setbeamertemplate{footline}{} % no page number here
+  \frame{
+    \vspace{0.5cm}
+    \begin{center}
+      \includegraphics[scale=0.065]{img/cover.png}
+    \end{center}
+  }
 }
 
 \input{parts/avant_propos.tex}
@@ -95,6 +100,5 @@
 \input{parts/oop.tex}
 
 \input{parts/tips.tex}
-
 
 \end{document}
