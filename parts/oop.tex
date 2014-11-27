@@ -1,11 +1,14 @@
 \section{Programmation Orientée Objet \emph{(POO)}}
 
+\begingroup
+\setbeamercolor{background canvas}{bg=foreground}
 \begin{frame}
     \begin{center}
         \vspace{1cm}
-        Programmation Orientée Objet \emph{(POO)}
+        {\Large Programmation Orientée Objet \emph{(POO)}}
     \end{center}
 \end{frame}
+\endgroup
 
 \begin{frame}[fragile]
   \begin{columns}[c]
@@ -63,10 +66,10 @@ class Thermostat
 
     public int Temperature // propriété
     {
-        get { return _temperature }
+        get { return _temperature; }
         set
         {
-            if(value >= 50)
+            if (value >= 50)
                 _temperature = 50;
             else
                 _temperature = value;
@@ -120,7 +123,7 @@ class BlueBicycle : IBicycle
 
     public string BrandName
     {
-        get { return _brandName }
+        get { return _brandName; }
         set { _brandName = lowerCase(value); }
     }
 }
