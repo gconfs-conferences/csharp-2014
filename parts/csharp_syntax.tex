@@ -27,8 +27,8 @@
     \begin{itemize}
       \item<+-> <type> <name>;
       \item<+-> <type> <name> = <valeur>;
-      \item<+-> <type>[] <name>;
-      \item<+-> <type>[] <name> = new <type>[<size>];
+      \item<+-> <type>[ ] <name>;
+      \item<+-> <type>[ ] <name> = new <type>[<size>];
     \end{itemize}
   \end{center}
 \end{frame}
@@ -74,10 +74,16 @@
   \end{csharpcode*}
 \end{frame}
 
-\begin{frame}[fragile]
-  \frametitle{Structures de contrôle}
+\begin{frame}
+  \begin{center}
+    \vspace{1cm}
+    Les structures de contrôle
+  \end{center}
+\end{frame}
 
-  \begin{center}{\large Opérateurs de comparaison}\end{center}
+\begin{frame}[fragile]
+  \frametitle{Les opérateurs de comparaison}
+
   \begin{itemize}
     \item<+-> == : 3 == 3
     \item<+-> != : 1 != 2
@@ -89,9 +95,8 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Structures de contrôle}
+  \frametitle{Le test}
 
-  \begin{center}{\large Le test}\end{center}
   \begin{csharpcode*}{fontsize=\scriptsize}
     if (<booléen>)
     {
@@ -122,10 +127,16 @@
   \end{csharpcode*}
 \end{frame}
 
-\begin{frame}[fragile]
-  \frametitle{Les boucles}
+\begin{frame}
+  \begin{center}
+    \vspace{1cm}
+    Les boucles
+  \end{center}
+\end{frame}
 
-  \begin{center}{\large Le for}\end{center}
+\begin{frame}[fragile]
+  \frametitle{Le for}
+
   \begin{csharpcode*}{fontsize=\scriptsize}
     for (<init>; <booléen>; <step>)
     {
@@ -147,9 +158,8 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les boucles}
+  \frametitle{Le while}
 
-  \begin{center}{\large Le while}\end{center}
   \begin{csharpcode*}{fontsize=\scriptsize}
     while (<booléen>)
     {
@@ -171,9 +181,8 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les boucles}
+  \frametitle{Le do while}
 
-  \begin{center}{\large Le do while}\end{center}
   \begin{csharpcode*}{fontsize=\scriptsize}
     do
     {
@@ -192,6 +201,155 @@
       str = Console.ReadLine();
       // Do something with str
     } while (str != "exit");
+  \end{csharpcode*}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \vspace{1cm}
+    Les fonctions
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Déclaration}
+
+  \begin{csharpcode*}{fontsize=\scriptsize}
+    <type> <name>(<parameter>)
+    {
+      // Code
+    }
+  \end{csharpcode*}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Les fonctions}
+
+  \begin{columns}[c]
+    \column{2.2in}
+    \begin{csharpcode*}{fontsize=\scriptsize}
+      int sum(int a, int b)
+      {
+        return a + b;
+      }
+    \end{csharpcode*}
+
+    \pause
+
+    \begin{csharpcode*}{fontsize=\scriptsize}
+      bool is_even(int n)
+      {
+        return n % 2 == 0;
+      }
+    \end{csharpcode*}
+
+    \pause
+
+    \column{2.3in}
+    \begin{csharpcode*}{fontsize=\scriptsize}
+      int div(int c, int d)
+      {
+        if (d == 0)
+        {
+          // FAIL
+        }
+        else
+          return c / d;
+      }
+    \end{csharpcode*}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Manipulation}
+
+  \begin{csharpcode*}{fontsize=\scriptsize}
+    int x = 5;
+    int y = 11;
+
+    int result_sum = sum(x, y); // result_sum = 16
+    int result_div = div(x, y); // result_div = 0
+    bool even = is_even(y); // even = false
+  \end{csharpcode*}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Les fonctions surchargées}
+
+  \begin{csharpcode*}{fontsize=\scriptsize}
+    void print(int n)
+    {
+      Console.WriteLine (n);
+    }
+
+    void print(int n, string msg)
+    {
+      Console.WriteLine (msg + " " + n);
+    }
+  \end{csharpcode*}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \vspace{1cm}
+    Les collections
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Les listes}
+
+  \begin{csharpcode*}{fontsize=\scriptsize}
+    List<<type>> <name> = new List<<type>>();
+  \end{csharpcode*}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Manipulation}
+
+  \begin{csharpcode*}{fontsize=\scriptsize}
+    List<string> words = new List<string>();
+  \end{csharpcode*}
+
+  \pause
+
+  \begin{center}{\large Ajout et suppression}\end{center}
+  \begin{csharpcode*}{fontsize=\scriptsize}
+    words.Add("hello");
+    words.Add("world");
+    words.Add("test");
+  \end{csharpcode*}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Parcourir une collection}
+
+  \begin{csharpcode*}{fontsize=\scriptsize}
+    foreach (<type> <name> in <collection>)
+    {
+      // Do something with <name>
+    }
+
+    for (int i = 0; i < <collection>.Count; ++i)
+    {
+      // Do something with <name> and its index
+    }
+  \end{csharpcode*}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Les collections}
+
+  \begin{csharpcode*}{fontsize=\scriptsize}
+    foreach (string current in words)
+    {
+      Console.WriteLine(current);
+    }
+
+    for (int i = 0; i < words.Count; ++i)
+    {
+      Console.WriteLine("[" + i + "]: " + words[i]);
+    }
   \end{csharpcode*}
 \end{frame}
 
