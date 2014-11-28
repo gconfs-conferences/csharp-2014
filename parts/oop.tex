@@ -106,25 +106,21 @@ public class Objet
 
 \begin{frame}[fragile]
   \begin{csharpcode}
-public class Boobs
+public class Girlfriend
 {
-    private int size;
-    private int nb_of_boobs;
+    private int _boobs_size;
+    private string _name;
+
+    public string Name {
+        get { return _name; }
+    }
 }
   \end{csharpcode}
   \pause
   \begin{csharpcode}
-public class Girlfriend
+public class Mira : Girlfriend
 {
-    private Boobs _boobs;
-    private String _name;
-
-    public Name {
-      get { return _name; }
-    }
-
-    private void ShowBoobs()
-    {
+    private void ShowBoobs() {
         // Show something interesting
     }
 }
