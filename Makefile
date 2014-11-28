@@ -2,7 +2,9 @@ all:
 	xelatex --shell-escape src.tex
 
 run:
-	evince src.pdf
+	output=$$(mktemp)
+	cp src.pdf $$output.pdf
+	zathura $$output.pdf
 
 clean:
 	rm -rf *.aux *.nav *.toc *.log *.out *.snm *.vrb *.pyg

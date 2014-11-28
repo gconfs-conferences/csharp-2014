@@ -5,7 +5,7 @@
 \begin{frame}
     \begin{center}
         \vspace{1cm}
-        {\Large\color{background}
+        {\Huge\color{background}
             Syntaxe C\#
         }
     \end{center}
@@ -15,7 +15,7 @@
 \begin{frame}
   \begin{center}
     \vspace{1cm}
-    Les variables
+    {\Huge Les variables}
   \end{center}
 \end{frame}
 
@@ -37,7 +37,7 @@
   \frametitle{Déclaration}
 
   \begin{center}{\large Exemples}\end{center}
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     int i;
     string str;
     int a = 5;
@@ -70,14 +70,14 @@
   \begin{center}{\large Strings}\end{center}
   \begin{csharpcode*}{fontsize=\scriptsize}
     string name = "Neodyblue";
-    string text = "Welcome " + name + " !"; // "Welcome Neodyblue !"
+    string text = "Welcome " + name + " !";// "Welcome Neodyblue !"
   \end{csharpcode*}
 \end{frame}
 
 \begin{frame}
   \begin{center}
     \vspace{1cm}
-    Les structures de contrôle
+    {\Large Les structures de contrôle}
   \end{center}
 \end{frame}
 
@@ -95,24 +95,9 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Le test}
+  \frametitle{Le Test.}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
-    if (<booleen>)
-    {
-      // true
-    }
-    else
-    {
-      // false
-    }
-  \end{csharpcode*}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Structures de contrôle}
-
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     Console.WriteLine("Say my name !");
     string name = Console.ReadLine();
 
@@ -130,14 +115,13 @@
 \begin{frame}
   \begin{center}
     \vspace{1cm}
-    Les boucles
+    {\Large Les boucles}
   \end{center}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Le for}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     for (<init>; <booleen>; <step>)
     {
       // Do something
@@ -146,9 +130,8 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les boucles}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     for (int i = 0; i < 10; ++i)
     {
       // This code will be executed 10 times
@@ -158,9 +141,8 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Le while}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     while (<booleen>)
     {
       // Do something
@@ -169,9 +151,8 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les boucles}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     string str = "";
     while (str.Length != 10)
     {
@@ -181,9 +162,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Le do while}
-
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     do
     {
       // Do something at least 1 time
@@ -192,9 +171,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les boucles}
-
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     string str = "";
     do
     {
@@ -207,14 +184,14 @@
 \begin{frame}
   \begin{center}
     \vspace{1cm}
-    Les fonctions
+    {\Large Factorisation : les fonctions}
   \end{center}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Déclaration}
+  \frametitle{Déclaration de fonction}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     <type> <name>(<parameter>)
     {
       // Code
@@ -223,11 +200,9 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les fonctions}
-
   \begin{columns}[c]
-    \column{2.2in}
-    \begin{csharpcode*}{fontsize=\scriptsize}
+    \column{2.3in}
+    \begin{csharpcode*}{fontsize=\normalsize}
       int sum(int a, int b)
       {
         return a + b;
@@ -236,7 +211,7 @@
 
     \pause
 
-    \begin{csharpcode*}{fontsize=\scriptsize}
+    \begin{csharpcode*}{fontsize=\normalsize}
       bool is_even(int n)
       {
         return n % 2 == 0;
@@ -246,7 +221,7 @@
     \pause
 
     \column{2.3in}
-    \begin{csharpcode*}{fontsize=\scriptsize}
+    \begin{csharpcode*}{fontsize=\normalsize}
       int div(int c, int d)
       {
         if (d == 0)
@@ -261,9 +236,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Manipulation}
-
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     int x = 5;
     int y = 11;
 
@@ -274,9 +247,9 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les fonctions surchargées}
+  \frametitle{Surcharge}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     void print(int n)
     {
       Console.WriteLine (n);
@@ -292,29 +265,27 @@
 \begin{frame}
   \begin{center}
     \vspace{1cm}
-    Les collections
+    {\Huge Les collections}
   \end{center}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les listes}
+  \frametitle{Listes}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     List<<type>> <name> = new List<<type>>();
   \end{csharpcode*}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Manipulation}
-
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     List<string> words = new List<string>();
   \end{csharpcode*}
 
   \pause
 
   \begin{center}{\large Ajout et suppression}\end{center}
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     words.Add("hello");
     words.Add("world");
     words.Add("test");
@@ -326,7 +297,7 @@
 \begin{frame}[fragile]
   \frametitle{Parcourir une collection}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     foreach (<type> <name> in <collection>)
     {
       // Do something with <name>
@@ -340,9 +311,9 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Les collections}
+  \frametitle{Parcourir une collection}
 
-  \begin{csharpcode*}{fontsize=\scriptsize}
+  \begin{csharpcode*}{fontsize=\normalsize}
     foreach (string word in words)
     {
       Console.WriteLine(word);

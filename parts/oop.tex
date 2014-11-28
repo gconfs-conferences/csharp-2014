@@ -5,7 +5,8 @@
 \begin{frame}
     \begin{center}
         \vspace{1cm}
-        {\Large Programmation Orientée Objet \emph{(POO)}}
+        {\Large\color{background}
+        Programmation Orientée Objet \emph{(POO)}}
     \end{center}
 \end{frame}
 \endgroup
@@ -35,8 +36,8 @@ public class Circle
     }
 }
     \end{csharpcode*}
-    \pause
     \column{2.2in}
+    \pause
     \begin{center}
       {\large Property (propriété)}\\
       \emph{\scriptsize Snippet VS : propfull}
@@ -110,8 +111,6 @@ interface IBicycle
 {
      string BrandName { get; set; }
 
-     void ChangeSpeed(int newValue);
-
      void Brake();
 }
     \end{csharpcode*}
@@ -121,10 +120,13 @@ class BlueBicycle : IBicycle
 {
     private string _brandName;
 
-    public string BrandName
-    {
+    public string BrandName {
         get { return _brandName; }
         set { _brandName = lowerCase(value); }
+    }
+
+    void Brake() {
+        // Braaaaaake! :o
     }
 }
     \end{csharpcode*}
